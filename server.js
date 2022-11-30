@@ -10,10 +10,14 @@ const args = minimist(process.argv.slice(2), {
 
 const app = express();
 
+app.get('/app/', function (req, res) {
+   res.send('200 OK');
+})
 
 
 
 
 
-
-app.listen(args.port);
+const server = app.listen(args.port, function () => {
+  console.log("Server listening on port ${args.port}");
+});
