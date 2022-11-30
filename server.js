@@ -11,3 +11,9 @@ const args = minimist(process.argv.slice(2), {
 const app = express();
 
 
+
+
+
+
+
+app.listen(args.port);
