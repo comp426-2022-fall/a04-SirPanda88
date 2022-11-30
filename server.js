@@ -19,5 +19,5 @@ app.get('/app/', function (req, res) {
 
 const port = args.port;
 const server = app.listen(port, function () {
-  console.log("Server listening on port ${port}");
+  console.log('Server listening on port ${port}');
 });
