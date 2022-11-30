@@ -18,6 +18,6 @@ app.get('/app/', function (req, res) {
 
 
 
-const server = app.listen(args.port, function () => {
+const server = app.listen(args.port, function () {
   console.log("Server listening on port ${args.port}");
 });
