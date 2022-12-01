@@ -11,7 +11,7 @@ const args = minimist(process.argv.slice(2), {
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/app/', function (req, res) {
+app.get('/app/', (req, res) {
 	res.send('200 OK');
 })
 
@@ -38,6 +38,6 @@ app.use((req, res) => {
 	res.status(404).send("404 NOT FOUND")
 })
 
-app.listen(args.port, function () {
+app.listen(args.port, () {
 	console.log("Server listening on port %s", args.port);
 });
