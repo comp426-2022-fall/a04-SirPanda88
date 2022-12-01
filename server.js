@@ -24,7 +24,7 @@ app.post('/app/roll/', (req, res) => {
 	const sides = parseInt(req.body.sides)
 	const dice = parseInt(req.body.dice)
 	const rolls = parseInt(req.body.rolls)
-console.log(req.query);
+	console.log(req.query);
 	res.send(roll(sides, dice, rolls))
 })
 
@@ -34,16 +34,16 @@ app.get('/app/roll/:sides/', (req, res) => {
 })
 
 app.get('/app/roll/:sides/:dice', (req, res) => {
-    const sides = parseInt(req.params.sides)
-    const dice = parseInt(req.params.dice)
-    res.send(roll(sides, dice, 1))
+	const sides = parseInt(req.params.sides)
+	const dice = parseInt(req.params.dice)
+	res.send(roll(sides, dice, 1))
 })
 
 app.get('/app/roll/:sides/:dice/:rolls', (req, res) => {
-    const sides = parseInt(req.params.sides)
-    const dice = parseInt(req.params.dice)
-    const rolls = parseInt(req.params.rolls)
-    res.send(roll(sides, dice, rolls))
+	const sides = parseInt(req.params.sides)
+	const dice = parseInt(req.params.dice)
+	const rolls = parseInt(req.params.rolls)
+	res.send(roll(sides, dice, rolls))
 })
 
 app.use((req, res) => {
