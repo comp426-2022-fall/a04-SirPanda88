@@ -10,7 +10,7 @@ const args = minimist(process.argv.slice(2), {
 
 const app = express();
 
-app.get('/app/', (req, res) {
+app.get('/app/', (req, res) => {
 	res.send('200 OK');
 })
 
