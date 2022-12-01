@@ -4,7 +4,7 @@
   "description": "a web API using Express to roll dice",
   "main": "server.js",
   "scripts": {
-    "test": "\"node server.js --port=5555\""
+    "test": "node server.js --port=5555"
   },
   "repository": {
     "type": "git",
