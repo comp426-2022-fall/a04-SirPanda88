@@ -49,6 +49,6 @@ app.use((req, res) => {
 	res.status(404).send("404 NOT FOUND")
 })
 
-app.listen(args.port, () {
+app.listen(args.port, () => {
 	console.log("Server listening on port %s", args.port);
 });
