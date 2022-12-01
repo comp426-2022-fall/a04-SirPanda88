@@ -9,6 +9,7 @@ const args = minimist(process.argv.slice(2), {
 });
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/app/', function (req, res) {
 	res.send('200 OK');
@@ -27,7 +28,10 @@ app.post('/app/roll', (req, res) => {
 	res.send(roll(sides, dice, rolls))
 })
 
-
+app.get('/app/roll/:sides/', (req, res) => {
+	const sides = parseInt(req.params.sides)
+	res.send(roll(sides, 2, 1))
+})
 
 
 app.use((req, res) => {
