@@ -24,8 +24,7 @@ app.post('/app/roll/', (req, res) => {
 	const sides = parseInt(req.body.sides)
 	const dice = parseInt(req.body.dice)
 	const rolls = parseInt(req.body.rolls)
-console.log(req.query)
-	console.log("sides: %s", sides);
+console.log(req.query);
 	res.send(roll(sides, dice, rolls))
 })
 
