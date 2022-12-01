@@ -9,7 +9,6 @@ const args = minimist(process.argv.slice(2), {
 });
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 
 app.get('/app/', (req, res) {
 	res.send('200 OK');
