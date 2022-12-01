@@ -9,7 +9,6 @@ const args = minimist(process.argv.slice(2), {
 });
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 
 app.get('/app/', (req, res) {
 	res.send('200 OK');
@@ -45,8 +44,6 @@ app.get('/app/roll/:sides/:dice/:rolls', (req, res) => {
     const rolls = parseInt(req.params.rolls)
     res.send(roll(sides, dice, rolls))
 })
-
-
 
 app.use((req, res) => {
 	res.status(404).send("404 NOT FOUND")
