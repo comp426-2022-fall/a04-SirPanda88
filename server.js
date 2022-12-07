@@ -51,5 +51,5 @@ app.use((req, res) => {
 })
 
 app.listen(args.port, () => {
-	console.log("Server listening on port %s", args.port);
+	console.log('Server listening on port %s', args.port);
 });
